@@ -35,16 +35,34 @@ alert(stringTimesTable);
 
 //task 3
 
-
 var stringEvenTimes = "";
-var arrayTimesTable = [];
+var timesTable =[];
 
-for (var a=1; a<=12; a++)
+for(var a=1; a<=12; a++)
 {
-    arrayTimesTable[a]=[];
-    for(var b=1; b<=12; b++)
+    timesTable[a] = [];
+    for(var b = 1; b <= 12; b++)
     {
-        arrayTimesTable[a][b] = a*b;
+        timesTable[a][b] = a*b;
+    }
+    
+}
+alert(timesTable);
+
+for (var i=1; i<=12; i++)
+{
+    if(i%2===0)
+    {
+        for (var j=1; j<=12; j++)
+        {
+            stringEvenTimes = stringEvenTimes + " " + timesTable[i][j] + " ";
+        }
+        stringEvenTimes += "\n";
     }
 }
-alert(arrayTimesTable);
+
+alert (stringEvenTimes);
+
+
+
+
